@@ -209,13 +209,45 @@ select {
   font-weight: bold;
 }
 
-form {
-  max-width: 600px;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-}
+  #travel-map {
+    background: white;
+    border-radius: 16px;
+    padding: 24px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  }
+
+  #map {
+    width: 100%;
+    height: 500px;
+    border-radius: 16px;
+    margin-top: 20px;
+    box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.06);
+  }
+
+  .map-legend {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    justify-content: center;
+    margin-top: 18px;
+  }
+
+  .map-legend button {
+    background: white;
+    border: 1px solid #cfe9d7;
+    border-radius: 999px;
+    padding: 10px 16px;
+    color: var(--dark);
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+
+  .map-legend button:hover,
+  .map-legend button:focus-visible {
+    transform: translateY(-1px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08);
+  }
+
 
 input, textarea {
   padding: 12px;
