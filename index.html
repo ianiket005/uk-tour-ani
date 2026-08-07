@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Uttarakhand Tourism</title>
+    <meta name="description" content="Discover the beauty of Uttarakhand with scenic destinations, adventure, and peaceful retreats." />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="hero">
+      <nav class="navbar">
+        <a href="#" class="logo">Uttarakhand</a>
+        <button class="menu-btn" aria-label="Toggle menu">☰</button>
+        <ul class="nav-links">
+          <li><a href="#destinations">Destinations</a></li>
+          <li><a href="#packages">Packages</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="hero-content">
+        <h1>Explore the Land of Gods</h1>
+        <p>Experience snow-capped peaks, peaceful valleys, spiritual temples, and unforgettable adventure in Uttarakhand.</p>
+        <a href="#packages" class="btn">Plan Your Trip</a>
+      </div>
+    </header>
+
+    <main>
+      <section id="destinations" class="section">
+        <h2>Popular Destinations</h2>
+        <div class="card-grid">
+          <article class="card">
+            <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=800&q=80" alt="Mussoorie hill station" />
+            <h3>Mussoorie</h3>
+            <p>Beautiful hill station known for misty views and colonial charm.</p>
+          </article>
+          <article class="card">
+            <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=800&q=80" alt="Nainital lake" />
+            <h3>Nainital</h3>
+            <p>Famous for its lake, gardens, and peaceful mountain air.</p>
+          </article>
+          <article class="card">
+            <img src="https://images.unsplash.com/photo-1500375592092-40eb2168fd21?auto=format&fit=crop&w=800&q=80" alt="Rishikesh river" />
+            <h3>Rishikesh</h3>
+            <p>Adventure, yoga, and spiritual vibes by the Ganges River.</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="packages" class="section alt-section">
+        <h2>Travel Packages</h2>
+        <div class="package-list">
+          <div class="package">
+            <h3>Weekend Escape</h3>
+            <p>2 days • Hill stay • Scenic sightseeing</p>
+            <span>From ₹4,999</span>
+          </div>
+          <div class="package">
+            <h3>Adventure Trip</h3>
+            <p>3 days • Rafting • Trekking • Camping</p>
+            <span>From ₹7,999</span>
+          </div>
+          <div class="package">
+            <h3>Spiritual Retreat</h3>
+            <p>4 days • Temples • Ashrams • Yoga</p>
+            <span>From ₹9,999</span>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="section">
+        <h2>Plan Your Visit</h2>
+        <form id="trip-form">
+          <input type="text" id="name" placeholder="Your Name" required />
+          <input type="email" id="email" placeholder="Your Email" required />
+          <textarea id="message" rows="4" placeholder="Tell us your travel plans"></textarea>
+          <button type="submit" class="btn">Send Inquiry</button>
+          <p id="form-message"></p>
+        </form>
+      </section>
+    </main>
+
+    <footer>
+      <p>© <span id="year"></span> Uttarakhand Tourism. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
