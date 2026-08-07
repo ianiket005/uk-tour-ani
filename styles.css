@@ -84,6 +84,8 @@ body {
   padding: 12px 24px;
   border-radius: 30px;
   transition: background 0.3s ease;
+  border: none;
+  cursor: pointer;
 }
 
 .btn:hover {
@@ -102,6 +104,19 @@ body {
   text-align: center;
   margin-bottom: 30px;
   color: var(--dark);
+}
+
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.feature-card {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
 }
 
 .card-grid {
@@ -130,6 +145,41 @@ body {
 
 .card p, .package p {
   padding: 0 15px 15px;
+}
+
+.planner-box {
+  max-width: 700px;
+  margin: 0 auto;
+  background: white;
+  padding: 24px;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+.planner-box p {
+  margin-bottom: 15px;
+}
+
+#planner-form {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 15px;
+}
+
+select {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  min-width: 220px;
+}
+
+.suggestion-box {
+  background: #f5fff8;
+  border: 1px solid #cfe9d7;
+  padding: 14px;
+  border-radius: 10px;
+  color: var(--dark);
 }
 
 .package-list {
@@ -173,7 +223,8 @@ footer {
 
 @media (max-width: 768px) {
   .card-grid,
-  .package-list {
+  .package-list,
+  .feature-grid {
     grid-template-columns: 1fr;
   }
 

@@ -14,6 +14,7 @@
         <button class="menu-btn" aria-label="Toggle menu">☰</button>
         <ul class="nav-links">
           <li><a href="#destinations">Destinations</a></li>
+          <li><a href="#ai-planner">AI Planner</a></li>
           <li><a href="#packages">Packages</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
@@ -22,11 +23,29 @@
       <div class="hero-content">
         <h1>Explore the Land of Gods</h1>
         <p>Experience snow-capped peaks, peaceful valleys, spiritual temples, and unforgettable adventure in Uttarakhand.</p>
-        <a href="#packages" class="btn">Plan Your Trip</a>
+        <a href="#ai-planner" class="btn">Try AI Planner</a>
       </div>
     </header>
 
     <main>
+      <section class="section alt-section">
+        <h2>Why Visit Uttarakhand?</h2>
+        <div class="feature-grid">
+          <div class="feature-card">
+            <h3>🌄 Scenic Beauty</h3>
+            <p>Majestic mountains, lakes, and valleys in every direction.</p>
+          </div>
+          <div class="feature-card">
+            <h3>🧘 Spiritual Retreat</h3>
+            <p>Discover temples, ashrams, and peaceful wellness escapes.</p>
+          </div>
+          <div class="feature-card">
+            <h3>⚡ Adventure Ready</h3>
+            <p>Rafting, trekking, camping, skiing, and more all year round.</p>
+          </div>
+        </div>
+      </section>
+
       <section id="destinations" class="section">
         <h2>Popular Destinations</h2>
         <div class="card-grid">
@@ -45,10 +64,42 @@
             <h3>Rishikesh</h3>
             <p>Adventure, yoga, and spiritual vibes by the Ganges River.</p>
           </article>
+          <article class="card">
+            <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=800&q=80" alt="Auli snow slopes" />
+            <h3>Auli</h3>
+            <p>Perfect for skiing, snow views, and cool alpine landscapes.</p>
+          </article>
+          <article class="card">
+            <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=800&q=80" alt="Chopta meadows" />
+            <h3>Chopta</h3>
+            <p>Known as the Mini Switzerland of Uttarakhand with lush meadows.</p>
+          </article>
+          <article class="card">
+            <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=800&q=80" alt="Jim Corbett jungle" />
+            <h3>Jim Corbett</h3>
+            <p>Great for jungle safaris, wildlife, and nature photography.</p>
+          </article>
         </div>
       </section>
 
-      <section id="packages" class="section alt-section">
+      <section id="ai-planner" class="section alt-section">
+        <h2>AI Travel Planner</h2>
+        <div class="planner-box">
+          <p>Select your travel mood and we will suggest the best Uttarakhand getaway for you.</p>
+          <form id="planner-form">
+            <select id="interest">
+              <option value="adventure">Adventure</option>
+              <option value="peace">Peace & Relaxation</option>
+              <option value="family">Family Trip</option>
+              <option value="spiritual">Spiritual Journey</option>
+            </select>
+            <button type="submit" class="btn">Get Suggestion</button>
+          </form>
+          <div id="planner-output" class="suggestion-box">Your smart suggestion will appear here.</div>
+        </div>
+      </section>
+
+      <section id="packages" class="section">
         <h2>Travel Packages</h2>
         <div class="package-list">
           <div class="package">
@@ -69,7 +120,7 @@
         </div>
       </section>
 
-      <section id="contact" class="section">
+      <section id="contact" class="section alt-section">
         <h2>Plan Your Visit</h2>
         <form id="trip-form">
           <input type="text" id="name" placeholder="Your Name" required />
