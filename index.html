@@ -6,7 +6,6 @@
     <title>Uttarakhand Tourism</title>
     <meta name="description" content="Discover the beauty of Uttarakhand with scenic destinations, adventure, and peaceful retreats." />
     <link rel="stylesheet" href="styles.css" />
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha512-sA+e2TuY2nuF8N0k7wQF7E+QZNK5OjRn6HeS9i5wK7iKJWv9JJnG7R7VqTSE1UH5Kw5Mf6xkzM6eZP1GMw4KQw==" crossorigin="" />
   </head>
   <body>
     <header class="hero">
@@ -93,9 +92,23 @@
 
       <section id="travel-map" class="section">
         <h2>Explore Uttarakhand on the Map</h2>
-        <p>Find the best spots for adventure, nature, and spirituality with an interactive map of top destinations.</p>
-        <div id="map"></div>
-        <div class="map-legend" aria-label="Destination map controls"></div>
+        <p>Find the best spots for adventure, nature, and spirituality with a static travel map.</p>
+        <div class="static-map" aria-label="Static Uttarakhand travel map">
+          <span class="map-pin pin-mussoorie" data-destination="Mussoorie" aria-label="Mussoorie"></span>
+          <span class="map-pin pin-nainital" data-destination="Nainital" aria-label="Nainital"></span>
+          <span class="map-pin pin-rishikesh" data-destination="Rishikesh" aria-label="Rishikesh"></span>
+          <span class="map-pin pin-auli" data-destination="Auli" aria-label="Auli"></span>
+          <span class="map-pin pin-chopta" data-destination="Chopta" aria-label="Chopta"></span>
+          <span class="map-pin pin-jim-corbett" data-destination="Jim Corbett" aria-label="Jim Corbett"></span>
+        </div>
+        <div class="map-legend" aria-label="Destination map legend">
+          <button type="button" data-destination="Mussoorie">Mussoorie</button>
+          <button type="button" data-destination="Nainital">Nainital</button>
+          <button type="button" data-destination="Rishikesh">Rishikesh</button>
+          <button type="button" data-destination="Auli">Auli</button>
+          <button type="button" data-destination="Chopta">Chopta</button>
+          <button type="button" data-destination="Jim Corbett">Jim Corbett</button>
+        </div>
       </section>
 
       <section class="section alt-section">
@@ -171,7 +184,6 @@
       <p>Web Developer: Aniket Patel</p>
     </footer>
 
-    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha512-QV1VJe2/LuL8T8sE6znsFw1RgG+0xhBKTic0ZV9wzIM1ZCQQ7c9jP2K4C+AaiSRROaX2nXo8+gWi9Ss6V7g8g==" crossorigin=""></script>
     <script src="script.js"></script>
   </body>
 </html>
