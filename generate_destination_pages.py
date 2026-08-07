@@ -348,10 +348,15 @@ dest_dir = root / 'destinations'
 dest_dir.mkdir(parents=True, exist_ok=True)
 
 for page in pages:
-    gallery_html = '\n'.join(
-        f"          <div class='gallery-card'>\n            <img src='{item['image']}' alt='{item['caption']}' />\n            <h4>{item['caption']}</h4>\n          </div>"
-        for item in page['gallery']
-    )
+    gallery_items = []
+    for i, item in enumerate(page['gallery']):
+        is360 = i == 0  # mark first image as a 360 candidate
+        btn_html = "<button class='view-360-btn' aria-label='Open 360 tour'>View 360</button>" if is360 else ''
+        data_attr = " data-is360='true'" if is360 else ''
+        gallery_items.append(
+            f"          <div class='gallery-card'{data_attr}>\n            <img src='{item['image']}' alt='{item['caption']}' />\n            <h4>{item['caption']}</h4>\n            {btn_html}\n          </div>"
+        )
+    gallery_html = '\n'.join(gallery_items)
     attractions_html = '\n'.join(f"<li>{item}</li>" for item in page['attractions'])
     tips_html = '\n'.join(f"<li>{item}</li>" for item in page['tips'])
 
