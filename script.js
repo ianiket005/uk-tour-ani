@@ -40,3 +40,49 @@ if (plannerForm && plannerOutput) {
   });
 }
 
+const geminiForm = document.getElementById('gemini-form');
+const geminiInput = document.getElementById('gemini-input');
+const geminiOutput = document.getElementById('gemini-output');
+
+if (geminiForm && geminiInput && geminiOutput) {
+  geminiForm.addEventListener('submit', function (e) {
+    e.preventDefault();
+    const query = geminiInput.value.trim().toLowerCase();
+
+    const responses = [
+      {
+        keywords: ['couple', 'romantic', 'honeymoon', 'partner'],
+        message: 'Gemini suggests Mussoorie for couples: candlelit dinners, sunset views above the valley, and quiet walks through deodar forests.'
+      },
+      {
+        keywords: ['family', 'kids', 'children', 'safe'],
+        message: 'Gemini suggests Nainital and Jim Corbett for families: boat rides, zoo visits, easy trails, and wildlife safaris.'
+      },
+      {
+        keywords: ['adventure', 'rafting', 'trek', 'camp', 'skiing'],
+        message: 'Gemini recommends Rishikesh and Auli for high-energy adventure: river rafting, cliff jumping, trekking, and snow sports.'
+      },
+      {
+        keywords: ['spiritual', 'meditation', 'yoga', 'temple', 'ashram'],
+        message: 'Gemini recommends Rishikesh and Haridwar for a spiritual journey with yoga, temple ceremonies, and peaceful Ganges views.'
+      },
+      {
+        keywords: ['hidden', 'secret', 'quiet', 'offbeat'],
+        message: 'Gemini highlights Kausani and Kanatal for offbeat escapes, tea gardens, mountain sunrises, and secluded hill viewpoints.'
+      },
+      {
+        keywords: ['history', 'culture', 'heritage'],
+        message: 'Gemini suggests exploring the ancient temple towns of Badrinath and the historic trading routes around Almora for culture and history.'
+      }
+    ];
+
+    const selected = responses.find((item) => item.keywords.some((keyword) => query.includes(keyword)));
+
+    geminiOutput.textContent = selected
+      ? selected.message
+      : 'Gemini recommends exploring the Kumaon and Garhwal regions for a balanced trip with nature, food, and local culture. Try asking about adventure, relaxation, history, or hidden gems.';
+
+    geminiInput.value = '';
+  });
+}
+

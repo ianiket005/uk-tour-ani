@@ -176,6 +176,44 @@ body {
   margin-bottom: 15px;
 }
 
+.gemini-box {
+  max-width: 700px;
+  margin: 0 auto;
+  background: linear-gradient(180deg, #ffffff 0%, #f3faf0 100%);
+  padding: 24px;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+.gemini-box p {
+  margin-bottom: 15px;
+}
+
+#gemini-form {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 15px;
+}
+
+#gemini-input {
+  flex: 1 1 260px;
+  padding: 12px;
+  border: 1px solid #c0d8c3;
+  border-radius: 8px;
+}
+
+.ai-output {
+  background: #eef9ef;
+  border: 1px solid #d5eddb;
+  padding: 16px;
+  border-radius: 12px;
+  color: var(--dark);
+  min-height: 80px;
+  display: flex;
+  align-items: center;
+}
+
 #planner-form {
   display: flex;
   gap: 10px;
