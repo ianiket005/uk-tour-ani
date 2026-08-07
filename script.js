@@ -40,21 +40,3 @@ if (plannerForm && plannerOutput) {
   });
 }
 
-const legendContainer = document.querySelector('.map-legend');
-const mapPins = document.querySelectorAll('.map-pin');
-
-if (legendContainer) {
-  legendContainer.addEventListener('click', function (event) {
-    const button = event.target.closest('button');
-    if (!button) return;
-
-    const destination = button.dataset.destination;
-    mapPins.forEach((pin) => {
-      pin.classList.toggle('highlight', pin.dataset.destination === destination);
-    });
-
-    legendContainer.querySelectorAll('button').forEach((btn) => {
-      btn.classList.toggle('active', btn === button);
-    });
-  });
-}
