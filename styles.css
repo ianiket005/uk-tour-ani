@@ -228,6 +228,10 @@ footer {
     grid-template-columns: 1fr;
   }
 
+  .feature-card {
+    padding: 16px;
+  }
+
   .nav-links {
     display: none;
     flex-direction: column;
